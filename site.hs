@@ -25,6 +25,12 @@ main = hakyll $ do
         route idRoute
         compile copyFileCompiler
 
+    match "css/*" $ compile compressCssCompiler
+
+    create ["style.css"] $ do
+        route idRoute
+        compile $ makeItem =<< unlines . fmap itemBody <$> loadAll "css/*.css"
+
     match "pages/*" $ do
         route $ customRoute $
             routePage . dropExtension . takeFileName . toFilePath

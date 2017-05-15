@@ -1,0 +1,21 @@
+#nav img {
+  float: left;
+}
+
+#nav ul {
+  list-style: none;
+}
+
+#nav ul li {
+  display: inline;
+  font-size: 40pt;
+  margin-left: 10%;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+#content {
+  clear: left;
+}
