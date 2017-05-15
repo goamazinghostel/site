@@ -12,6 +12,7 @@ extra-source-files:  ChangeLog.md
 cabal-version:       >=1.10
 
 executable goamazing
+  ghc-options:         -Wall
   main-is:             site.hs
   build-depends:       base >=4.9 && <4.10, filepath, hakyll
   default-language:    Haskell2010
